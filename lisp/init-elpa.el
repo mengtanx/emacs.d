@@ -28,7 +28,11 @@
       ;; Force SSL for GNU ELPA
       (setcdr (assoc "gnu" package-archives) "https://elpa.gnu.org/packages/"))))
 
-
+;; 增加包镜像
+;; (setq package-check-signature nil)
+(setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+                         ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+
 ;;; On-demand installation of packages
 
 (require 'cl-lib)
